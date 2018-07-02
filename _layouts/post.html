@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+{%- include head.html -%}
+<body>
+  <div class="header">
+    <span class="toggle-button">
+      <a href="/" title="Все записи">&#9776</a>
+    </span>
+    <div class="header_wrapper">
+      <span class="header_post--title">{{ page.title }}</span>
+      <p class="header_post--date">{{ page.date }}</p>
+    </div>
+  </div>
+  <div class="main-wrapper">
+    {{ page.content }}
+    {%- include footer.html -%}
+  </div>
+</body>
+</html>
