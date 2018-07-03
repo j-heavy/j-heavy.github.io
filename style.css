@@ -1,40 +1,40 @@
 * {
-	-webkit-box-sizing: border-box;
-    		box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 ::after, ::before {
     -webkit-box-sizing: inherit;
-    		box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 body {
-	margin: 0;
+    margin: 0;
 }
 
 html {
-	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: calc(18px + .1vw);
-	overflow-x: hidden;
-	line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: calc(18px + .1vw);
+    overflow-x: hidden;
+    line-height: 1.6;
 }
 
 @media (max-width: 1366px) {
-	html {
-		font-size: calc(16px + .1vw);
-	}
+    html {
+        font-size: calc(16px + .1vw);
+    }
 }
 
 ::selection {
-	background-color: #ff0;	
+    background-color: #ff0; 
 }
 
 .header {
-	height: 75vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background: url(https://j-heavy.ru/anime.jpg) center no-repeat;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(https://j-heavy.ru/anime.jpg) center no-repeat;
     background-size: cover;
     margin-bottom: 15px;
 }
@@ -52,42 +52,42 @@ html {
 }
 
 .header_wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 3;
-	padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    padding: 0 20px;
     margin: 0 auto;
     width: 100%;
     max-width: 860px;
 }
 
 .header_title {
-	font-family: 'Kalam', cursive;
-	font-size: 3rem;
-	color: rgb(255, 255, 255);
-	font-weight: bold;
-	text-align: center;
-	text-shadow: 0 0 6px rgb(0, 0, 0);
+    font-family: 'Kalam', cursive;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 6px rgb(0, 0, 0);
 }
 
 .header_post--title {
-	font-weight: bold;
-	font-size: 2.5rem;
-	color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
     text-shadow: 0 0 6px rgb(0, 0, 0);
 }
 
 .header_post--date {
-	color: rgb(255, 255, 255);
-	text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
     letter-spacing: .8px;
 }
 
 .toggle-button {
-	z-index: 4;
-	position: absolute;
+    z-index: 4;
+    position: absolute;
     width: 100%;
     text-align: left;
     left: 7px;
@@ -102,11 +102,11 @@ html {
 }
 
 .main-wrapper {
-	padding: 0 20px;
-    margin: 0 auto;
+    padding: 0 20px;
+    margin: 0 auto 45px;
     width: 100%;
     max-width: 840px;
-}
+} 
 
 a, 
 a:visited {
@@ -132,30 +132,30 @@ hr {
 }
 
 .about_forphone {
-	display: none;
-	width: 100%;
+    display: none;
+    width: 100%;
 }
 
 .about {
-	display: flex;
+    display: flex;
 }
 
 .about-desktop {
-	width: calc(800px - 95px);
+    width: calc(800px - 95px);
 }
 
 .about_desktop--name,
 .about_forphone--name {
-	margin: 0 0 -20px;
+    margin: 0 0 -20px;
 }
 
 .about_desktop--postion,
 .about_forphone--position {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .about_desktop--userpic, .about_forphone--userpic {
-	background: url("https://j-heavy.ru/ichigo.jpg") no-repeat;
+    background: url("https://j-heavy.ru/ichigo.jpg") no-repeat;
     background-size: cover;
     border-radius: 50%;
     min-width: 80px;
@@ -165,34 +165,30 @@ hr {
 }
 
 @media (max-width: 620px) {
-	.about {
-		flex-direction: column; 
-	}
+    .about {
+        flex-direction: column; 
+    }
 
-	.about_forphone {
-		display: flex;
-	}
+    .about_forphone {
+        display: flex;
+    }
 
-	.about_desktop--userpic, .about_desktop--name, .about_desktop--position {
-		display: none;
-	}
+    .about_desktop--userpic, .about_desktop--name, .about_desktop--position {
+        display: none;
+    }
 
-	.about_forphone--name {
-		margin-top: 5px;
-		margin-bottom: 0px;
-	}
-}
-
-.posts {
-	margin-bottom: 30px;
+    .about_forphone--name {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
 }
 
 .posts__header, .about_desktop--components {
-	margin: 0 0 -5px;
+    margin: 0 0 -5px;
 }
 
 .posts__title {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer {
@@ -236,108 +232,160 @@ td, th {
     padding: 15px;
 }
 
+code:not(code[class*="language-"]) {
+    font-weight: 400;
+    color: #000;
+    word-break: break-word;
+    background-color: #f8f8f8;
+    display: inline-block;
+    padding: 0 .25rem;
+}
+
 li {
     margin-bottom: 8px;
     font-weight: 400;
 }
 
-.footer_social {
-    display: flex;
-    flex-direction: column;
-    width: 50px;
-}
-
-.footer_social a, .footer_socia a:visited {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 12px;
-    border: none;
-    text-transform: uppercase;
-    color: #4f4f4f;
-    letter-spacing: .1rem;
-    line-height: 32px;
-    font-weight: 500;
-}
-
-.footer_social a:hover {
-    border: none;
-    text-transform: uppercase;
-    color: #9e9e9e;
-}
-
-.footer_copyright {
-    display: flex;
-    justify-content: center;
-}
-
-.footer_copyright--text {
-    color: rgba(29,29,29,.3);
-}
-
-
-figure {
-    margin: 0 0;
+pre { 
     width: 100vw;
     position: relative;
     left: 50%;
     margin-left: -50vw;
+    padding: 15px calc((100vw - 800px) / 2);
 }
-.hll { background-color: #49483e }
-pre { background: #272822; color: #f8f8f2 }
-.c { color: #75715e } /* Comment */
-.err { color: #960050; background-color: #1e0010 } /* Error */
-.k { color: #66d9ef } /* Keyword */
-.l { color: #ae81ff } /* Literal */
-.n { color: #f8f8f2 } /* Name */
-.o { color: #f92672 } /* Operator */
-.p { color: #f8f8f2 } /* Punctuation */
-.cm { color: #75715e } /* Comment.Multiline */
-.cp { color: #75715e } /* Comment.Preproc */
-.c1 { color: #75715e } /* Comment.Single */
-.cs { color: #75715e } /* Comment.Special */
-.ge { font-style: italic } /* Generic.Emph */
-.gs { font-weight: bold } /* Generic.Strong */
-.kc { color: #66d9ef } /* Keyword.Constant */
-.kd { color: #66d9ef } /* Keyword.Declaration */
-.kn { color: #f92672 } /* Keyword.Namespace */
-.kp { color: #66d9ef } /* Keyword.Pseudo */
-.kr { color: #66d9ef } /* Keyword.Reserved */
-.kt { color: #66d9ef } /* Keyword.Type */
-.ld { color: #e6db74 } /* Literal.Date */
-.m { color: #ae81ff } /* Literal.Number */
-.s { color: #e6db74 } /* Literal.String */
-.na { color: #a6e22e } /* Name.Attribute */
-.nb { color: #f8f8f2 } /* Name.Builtin */
-.nc { color: #a6e22e } /* Name.Class */
-.no { color: #66d9ef } /* Name.Constant */
-.nd { color: #a6e22e } /* Name.Decorator */
-.ni { color: #f8f8f2 } /* Name.Entity */
-.ne { color: #a6e22e } /* Name.Exception */
-.nf { color: #a6e22e } /* Name.Function */
-.nl { color: #f8f8f2 } /* Name.Label */
-.nn { color: #f8f8f2 } /* Name.Namespace */
-.nx { color: #a6e22e } /* Name.Other */
-.py { color: #f8f8f2 } /* Name.Property */
-.nt { color: #f92672 } /* Name.Tag */
-.nv { color: #f8f8f2 } /* Name.Variable */
-.ow { color: #f92672 } /* Operator.Word */
-.w { color: #f8f8f2 } /* Text.Whitespace */
-.mf { color: #ae81ff } /* Literal.Number.Float */
-.mh { color: #ae81ff } /* Literal.Number.Hex */
-.mi { color: #ae81ff } /* Literal.Number.Integer */
-.mo { color: #ae81ff } /* Literal.Number.Oct */
-.sb { color: #e6db74 } /* Literal.String.Backtick */
-.sc { color: #e6db74 } /* Literal.String.Char */
-.sd { color: #e6db74 } /* Literal.String.Doc */
-.s2 { color: #e6db74 } /* Literal.String.Double */
-.se { color: #ae81ff } /* Literal.String.Escape */
-.sh { color: #e6db74 } /* Literal.String.Heredoc */
-.si { color: #e6db74 } /* Literal.String.Interpol */
-.sx { color: #e6db74 } /* Literal.String.Other */
-.sr { color: #e6db74 } /* Literal.String.Regex */
-.s1 { color: #e6db74 } /* Literal.String.Single */
-.ss { color: #e6db74 } /* Literal.String.Symbol */
-.bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
-.vc { color: #f8f8f2 } /* Name.Variable.Class */
-.vg { color: #f8f8f2 } /* Name.Variable.Global */
-.vi { color: #f8f8f2 } /* Name.Variable.Instance */
-.il { color: #ae81ff } /* Literal.Number.Integer.Long */
+
+/* PrismJS 1.15.0
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],pre[class*="language-"]{
+    color: #c5c8c6;
+    text-shadow:0 1px rgba(0, 0, 0, 0.3);
+    font-family:"Fira Code", Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    direction:ltr;
+    text-align:left;
+    white-space:pre;
+    word-spacing:normal;
+    word-break:normal;
+    line-height:1.3;
+    -moz-tab-size:4;
+    -o-tab-size:4;
+    tab-size:4;
+    -webkit-hyphens:none;
+    -ms-hyphens:none;
+    hyphens:none
+}
+pre[class*="language-"]{
+    overflow:auto
+}
+:not(pre) > code[class*="language-"],pre[class*="language-"]{
+    background: #1d1f21;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #7C7C7C;
+}
+
+.token.punctuation {
+    color: #c5c8c6;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.keyword,
+.token.tag {
+    color: #96CBFE;
+}
+
+.token.class-name {
+    color: #FFFFB6;
+    text-decoration: underline;
+}
+
+.token.boolean,
+.token.constant {
+    color: #99CC99;
+}
+
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+
+.token.number {
+    color: #FF73FD;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #A8FF60;
+}
+
+.token.variable {
+    color: #C6C5FE;
+}
+
+.token.operator {
+    color: #EDEDED;
+}
+
+.token.entity {
+    color: #FFFFB6;
+    /* text-decoration: underline; */
+}
+
+.token.url {
+    color: #96CBFE;
+}
+
+.language-css .token.string,
+.style .token.string {
+    color: #87C38A;
+}
+
+.token.atrule,
+.token.attr-value {
+    color: #F9EE98;
+}
+
+.token.function {
+    color: #DAD085;
+}
+
+.token.regex {
+    color: #E9C062;
+}
+
+.token.important {
+    color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+
+
