@@ -232,13 +232,26 @@ td, th {
     padding: 15px;
 }
 
-code:not(code[class*="language-"]) {
+h1 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+code:not([class*="language-"]) {
     font-weight: 400;
     color: #000;
     word-break: break-word;
-    background-color: #f8f8f8;
+    background-color: #f6f6f6;
     display: inline-block;
-    padding: 0 .25rem;
+    padding: 3px 10px;
+    border-radius: 2px;
 }
 
 li {
