@@ -1,2 +1,2 @@
-# heavy-s-blog
+# heavy blog #
 works on jekyll (jekyllrb.com)
