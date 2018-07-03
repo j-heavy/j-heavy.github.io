@@ -1,7 +1,4 @@
-{%- if page.comments != false -%}
-
-  <div id="disqus_thread"></div>
+ <div id="disqus_thread"></div>
   <script>
  (function(){var disqus_shortname='heavy-s-blog',el=document.getElementById('disqus_thread')window.addEventListener('scroll',checkPosition)window.addEventListener('load',checkPosition)function checkPosition(){var rect=el.getBoundingClientRect()if(rect.top<window.innerHeight){window.removeEventListener('scroll',checkPosition)window.removeEventListener('load',checkPosition)loadDisqus()}}function loadDisqus(){var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=!0;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq)}})()
   </script>
-{%- endif -%}
