@@ -52,7 +52,7 @@ hr {
 }
 
 .about_desktop--userpic, .about_forphone--userpic {
-    background: url("https://j-heavy.ru/ichigo.jpg") no-repeat;
+    background: url("assets/ichigo.svg") no-repeat;
     background-size: cover;
     border-radius: 50%;
     min-width: 80px;
