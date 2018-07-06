@@ -7,8 +7,4 @@ url: ""
 telegram_username: itsheavy
 github_username:  j-heavy
 
-# Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
