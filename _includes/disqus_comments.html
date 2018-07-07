@@ -1,5 +1,5 @@
 <script>
-	(function() {
+	(function () {
 		el = document.getElementById('disqus_thread')
 
 		window.addEventListener('scroll', checkPosition)
@@ -14,13 +14,13 @@
 	   		}
 		}
 
-		function loadDisqus {
+		function loadDisqus (){
 			var disqus_config = function () {
-				this.page.url = {{ page.url }};  
+				this.page.url = j-heavy.ru;  
 				this.page.identifier = {{ page.id }}; 
 			};
 
-			(function() { 
+			(function () { 
 				var d = document, s = d.createElement('script');
 				s.src = 'https://heavy-s-blog.disqus.com/embed.js';
 				s.setAttribute('data-timestamp', +new Date());
