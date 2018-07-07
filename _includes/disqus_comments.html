@@ -1,32 +1,29 @@
 <div id="disqus_thread"></div>
 <script>
 	(function () {
-		el = document.getElementById('disqus_thread')
+		el = document.getElementById('disqus_thread');
 
-		window.addEventListener('scroll', checkPosition)
-		window.addEventListener('load', checkPosition)
+		window.addEventListener('scroll', checkPosition);
+		window.addEventListener('load', checkPosition);
 
 		function checkPosition () {
 	    	var rect = el.getBoundingClientRect()
 	    	if (rect.top < window.innerHeight) {
-	        	window.removeEventListener('scroll', checkPosition)
-	        	window.removeEventListener('load', checkPosition)
-	        	loadDisqus()
+	        	window.removeEventListener('scroll', checkPosition);
+	        	window.removeEventListener('load', checkPosition);
+	        	loadDisqus();
 	   		}
-		}
+		};
 
 		function loadDisqus (){
 			var disqus_config = function () {
-				this.page.url = "j-heavy.ru";  
+				this.page.url = document.domain;  
 				this.page.identifier = "{{ page.id }}"; 
 			};
-
-			(function () { 
-				var d = document, s = d.createElement('script');
-				s.src = 'https://heavy-s-blog.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-			})();
+			var d = document, s = d.createElement('script');
+			s.src = 'https://heavy-s-blog.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
 		};
 	})();
 </script>
