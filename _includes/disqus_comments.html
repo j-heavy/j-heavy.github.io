@@ -1,16 +1,33 @@
- <!-- <div id="disqus_thread"></div>
-  <script>
-var disqus_config = function () {
-    this.page.url = document.location.href ;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = '28763283698326726379'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
+{% if page.comments}
+<script>
+	(function() {
+		el = document.getElementById('disqus_thread')
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://heavy-s-blog.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+		window.addEventListener('scroll', checkPosition)
+		window.addEventListener('load', checkPosition)
+
+		function checkPosition () {
+	    	var rect = el.getBoundingClientRect()
+	    	if (rect.top < window.innerHeight) {
+	        	window.removeEventListener('scroll', checkPosition)
+	        	window.removeEventListener('load', checkPosition)
+	        	loadDisqus()
+	   		}
+		}
+
+		function loadDisqus {
+			var disqus_config = function () {
+				this.page.url = {{ page.url }};  
+				this.page.identifier = {{ page.id }}; 
+			};
+
+			(function() { 
+				var d = document, s = d.createElement('script');
+				s.src = 'https://heavy-s-blog.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		};
+	})();
 </script>
-  </script>
- -->
+{% endif %}
