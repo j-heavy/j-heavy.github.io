@@ -1,5 +1,5 @@
 <div id="disqus_thread"></div>
-<!-- <script>
+<script>
 	(function () {
 		el = document.getElementById('disqus_thread');
 
@@ -17,7 +17,7 @@
 
 		function loadDisqus (){
 			var disqus_config = function () {
-				this.page.url = document.domain;  
+				this.page.url = document.location.href;  
 				this.page.identifier = "{{ page.id }}"; 
 			};
 			var d = document, s = d.createElement('script');
@@ -26,18 +26,4 @@
 			(d.head || d.body).appendChild(s);
 		};
 	})();
-</script> -->
-<script>
-
-var disqus_config = function () {
-	this.page.url = window.location.href;
-	this.page.identifier = "{{ page.url }}"; 
-};
-
-(function() { 
-	var d = document, s = d.createElement('script');
-	s.src = 'https://heavy-s-blog.disqus.com/embed.js';
-	s.setAttribute('data-timestamp', +new Date());
-	(d.head || d.body).appendChild(s);
-})();
-</script>
+</script> 
