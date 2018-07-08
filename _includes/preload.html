@@ -1,7 +1,9 @@
 <script>
+	NProgress.start();
 	document.addEventListener("DOMContentLoaded", preload);
 
 	function preload () {
+		NProgress.done();
 		if (document.images) {
 			img1 = new Image();
 			img2 = new Image();
