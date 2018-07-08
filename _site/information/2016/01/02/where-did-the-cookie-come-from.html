@@ -9,7 +9,7 @@
 	</style>
 	<style>
 		.header {
-			background: url() ;
+			background: url();
 		}
 	</style>
 
@@ -74,21 +74,35 @@
 
 <p>Source / Read more <a href="https://en.wikipedia.org/wiki/Chocolate_chip_cookie">Wikipedia</a></p>
 
-    <hr> <!-- <div id="disqus_thread"></div>
-  <script>
-var disqus_config = function () {
-    this.page.url = document.location.href ;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = '28763283698326726379'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
+    <hr><div id="disqus_thread"></div>
+<script>
+	(function () {
+		var el = document.getElementById('disqus_thread');
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://heavy-s-blog.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-  </script>
- --></div>
+		window.addEventListener('scroll', checkPosition);
+		window.addEventListener('load', checkPosition);
+
+		function checkPosition () {
+	    	var rect = el.getBoundingClientRect()
+	    	if (rect.top < window.innerHeight) {
+	        	window.removeEventListener('scroll', checkPosition);
+	        	window.removeEventListener('load', checkPosition);
+	        	loadDisqus();
+	   		}
+		};
+
+		function loadDisqus (){
+			var disqus_config = function () {
+				this.page.url = document.location.href;  
+				this.page.identifier = "/information/2016/01/02/where-did-the-cookie-come-from"; 
+			};
+			var d = document, s = d.createElement('script');
+			s.src = 'https://heavy-s-blog.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		};
+	})();
+</script> 
+</div>
 </body>
 </html>
