@@ -141,6 +141,11 @@ h3 {
     font-size: 1.2rem;
 }
 
+.preload {
+    width: 0;
+    height: 0;
+}
+
 code:not([class*="language-"]) {
     font-weight: 400;
     color: #000;

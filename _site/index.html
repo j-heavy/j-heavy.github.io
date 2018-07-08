@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
 	<style>
-	*{-webkit-box-sizing:border-box;box-sizing:border-box}::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0}html{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:calc(18px + .1vw);overflow-x:hidden;line-height:1.6}@media (max-width:1366px){html{font-size:calc(16px + .1vw)}}::selection{background-color:#ff0}.header{height:75vh;display:flex;flex-direction:column;justify-content:center;background-size:cover;margin-bottom:15px}.header:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.65);z-index:2;height:75vh}.header_wrapper{display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:3;padding:0 20px;margin:0 auto;width:100%;max-width:860px}.header_title{font-family:'Kalam',cursive;font-size:3rem;color:rgb(255,255,255);font-weight:700;text-align:center;text-shadow:0 0 6px rgb(0,0,0)}.header_post--title{font-weight:700;font-size:2.5rem;color:rgb(255,255,255);text-shadow:0 0 6px rgb(0,0,0);text-align:center}.header_post--date{color:rgb(255,255,255);text-transform:uppercase;letter-spacing:.8px}.toggle-button{z-index:4;position:absolute;width:100%;text-align:left;left:7px;top:7px;font-size:28px}.toggle-button a,.toggle-button a:hover,.toggle-button a:visited{border:none;text-decoration:none;color:rgb(255,255,255)}
-	</style>
-	<style>
 		.header {
-			background: url(/assets/anime.jpg);
+			background: url(/assets/anime.jpg) center no-repeat;
 			background-size: cover;
 		}
+	</style>
+	<style>
+	*{-webkit-box-sizing:border-box;box-sizing:border-box}::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0}html{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:calc(18px + .1vw);overflow-x:hidden;line-height:1.6}@media (max-width:1366px){html{font-size:calc(16px + .1vw)}}::selection{background-color:#ff0}.header{height:75vh;display:flex;flex-direction:column;justify-content:center;margin-bottom:15px}.header:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.65);z-index:2;height:75vh}.header_wrapper{display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:3;padding:0 20px;margin:0 auto;width:100%;max-width:860px}.header_title{font-family:'Kalam',cursive;font-size:3rem;color:rgb(255,255,255);font-weight:700;text-align:center;text-shadow:0 0 6px rgb(0,0,0)}.header_post--title{font-weight:700;font-size:2.5rem;color:rgb(255,255,255);text-shadow:0 0 6px rgb(0,0,0);text-align:center}.header_post--date{color:rgb(255,255,255);text-transform:uppercase;letter-spacing:.8px}.toggle-button{z-index:4;position:absolute;width:100%;text-align:left;left:7px;top:7px;font-size:28px}.toggle-button a,.toggle-button a:hover,.toggle-button a:visited{border:none;text-decoration:none;color:rgb(255,255,255)}
 	</style>
 
 	<link rel="dns-prefetch" href="//j-heavy.ru">
@@ -70,8 +70,8 @@
         <p class="about_desktop--position">Front-end developer</p>
         <hr>
         <p>Занимаюсь Front-end разработкой, пишу скриптики с ~2015 года. Здесь выкладываю посты о разработке, оптимизации и прочем, пишу редко, в основном по будням. Люблю jQuery, но мне запрещают на нём писать :( <br><br>
-        По любым вопросам: <a href="" target="_blank">telegram</a><br>
-        Мои творения: <a href="" target="_blank">github</a>
+        По любым вопросам: <a href="https://t.me/itsheavy" target="_blank">telegram</a><br>
+        Мои творения: <a href="https://github.com/j-heavy" target="_blank">github</a>
         <h2 class="about_desktop--components">Мои инструменты</h2>
         <ul>
           <li>JS (React & Redux)</li>
@@ -82,14 +82,27 @@
           <h2 class="posts__header">Посты</h2>
           <ul>
             
-              <li class="posts__title"><a href="/information/2016/01/02/where-did-the-cookie-come-from.html">Where Did The Cookie Come From</a></li>
+              <li class="posts__title"><a href="/2016/01/02/where-did-the-cookie-come-from.html">Where Did The Cookie Come From</a></li>
             
-              <li class="posts__title"><a href="/information/2016/01/01/what-is-sour-dough.html">What Is Sour Dough</a></li>
+              <li class="posts__title"><a href="/2016/01/01/what-is-sour-dough.html">What Is Sour Dough</a></li>
             
           </ul>
         </div>
       </div>
     </div>
   </div>
-</body>
+  <div class="preload"></div><script>
+	document.addEventListener("DOMContentLoaded", preload);
+
+	function preload () {
+		if (document.images) {
+			img1 = new Image();
+			img2 = new Image();
+			img3 = new Image();
+
+			img1.src = "/assets/asuna.jpg";
+			img2.src = "/assets/ichigo-fullhd.jpg";
+		}
+	}
+</script></body>
 </html>
