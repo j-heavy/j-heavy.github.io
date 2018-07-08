@@ -13,11 +13,13 @@
 	    *{-webkit-box-sizing:border-box;box-sizing:border-box}::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0}html{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:calc(18px + .1vw);overflow-x:hidden;line-height:1.6}@media (max-width:1366px){html{font-size:calc(16px + .1vw)}}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}.header{height:75vh;display:flex;flex-direction:column;justify-content:center;margin-bottom:15px}.header:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.65);z-index:2;height:75vh}.header_wrapper{display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:3;padding:0 20px;margin:0 auto;width:100%;max-width:860px}.header_title{font-family:'Kalam',cursive;font-size:3rem;color:rgb(255,255,255);font-weight:700;text-align:center;text-shadow:0 0 6px rgb(0,0,0)}.header_post--title{font-weight:700;font-size:2.5rem;color:rgb(255,255,255);text-shadow:0 0 6px rgb(0,0,0);text-align:center}.header_post--date{color:rgb(255,255,255);text-transform:uppercase;letter-spacing:.8px}.toggle-button{z-index:4;position:absolute;width:100%;text-align:left;left:7px;top:7px;font-size:28px}.toggle-button a,.toggle-button a:hover,.toggle-button a:visited{border:none;text-decoration:none;color:rgb(255,255,255)}
 	</style>
 
-	<link rel="prefetch" href="{{ page.cover_url }}">
+	{% for post in site.posts %}
+        <link rel="prerender" href="{{ post.url }}">
+    {% endfor %}
 
 	<link rel="dns-prefetch" href="//j-heavy.ru">
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//yastatic.net">
+	<link rel="dns-prefetch" href="//yastatic.net">`
 
 	<link rel="preconnect" href='https://j-heavy.ru' crossorigin>
 
