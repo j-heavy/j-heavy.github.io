@@ -11,10 +11,10 @@ markdown: kramdown
 
 compress_html:
     clippings: []
-    comments: []
-    endings: []
+    comments: ["<!-- ", " -->"]
+    endings: all
     ignore:
     envs: []
-    blanklines: false
+    blanklines: true
     profile: false
-    startings: []
+    startings: [html, head, body]
