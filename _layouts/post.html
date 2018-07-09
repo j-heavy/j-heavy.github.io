@@ -7,6 +7,7 @@ layout: compress
 {%- include head.html -%}
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 <body>
+  {%- include preload.html -%}
   <div class="header">
     <span class="toggle-button">
       <a href="/" title="Все записи">&#9776</a>
@@ -21,6 +22,5 @@ layout: compress
     <hr>
   </div>
   <div class="preload"></div>
-  {%- include preload.html -%}
 </body>
 </html>
