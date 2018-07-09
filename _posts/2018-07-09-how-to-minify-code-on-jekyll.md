@@ -9,7 +9,7 @@ permalink: minifycodeonjekyll
 Минификация кода — неотъемлемая часть оптимизации клиентской стороны веб-сайта. Благодаря шаблону __compress.html__ это можно сделать в пару кликов.
 
 # Установка
-Переходим на [guthub](https://github.com/penibelst/jekyll-compress-html/releases/latest), откуда скачиваем последнюю версию. Из скачанного zip-архива берём нужный нам файл — __compress.html__ (*site* -> *_layouts*). Добавляем файл к себе на сайт в папку *_layouts*. 
+Переходим на [github](https://github.com/penibelst/jekyll-compress-html/releases/latest), откуда скачиваем последнюю версию. Из скачанного zip-архива берём нужный нам файл — __compress.html__ (*site* -> *_layouts*). Добавляем файл к себе на сайт в папку *_layouts*. 
 
 Добавляем этот шаблон к уже существующим на сайте: 
 ![](/assets/jekyllminify.png)
