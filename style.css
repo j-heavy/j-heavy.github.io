@@ -74,13 +74,6 @@
 }
 }
 
-.main-wrapper {
-    padding: 0 20px;
-    margin: 0 auto 45px;
-    width: 100%;
-    max-width: 840px;
-} 
-
 a, 
 a:visited {
     transition-property: border-bottom, border-color, background, color, fill;
