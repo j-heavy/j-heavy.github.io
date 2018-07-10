@@ -9,6 +9,9 @@ github_username:  j-heavy
 
 markdown: kramdown
 
+plugins:
+  - jekyll-minifier
+
 compress_html:
   clippings: all
   comments:  ["<!-- ", " -->"]
