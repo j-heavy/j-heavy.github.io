@@ -36,12 +36,6 @@
 
 	<meta name="author" content="{{ site.author }}">
     <meta name="description" content="{{ site.description }}">
-
-	<!-- If javascript is enabled -->
-
-	<noscript>
-		<meta http-equiv="refresh" content="0; URL=/brokenbrowser.html">
-	</noscript>
 	
 	<!-- For old IE version -->
 
@@ -54,4 +48,5 @@
 	
 	<script src="/main.js"></script>
 
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/style.css" media="none" onload="if(media!='all')media='all'">
+	<noscript><link rel="stylesheet" href="css.css"></noscript>
