@@ -1,3 +1,7 @@
+.header {
+    opacity: 1;
+}
+
 a, 
 a:visited {
     transition-property: border-bottom, border-color, background, color, fill;
@@ -160,16 +164,6 @@ pre {
     margin-left: -50vw;
     padding: 15px calc((100vw - 800px) / 2);
 }
-
-body {
-    opacity: 1;
-    -webkit-transition: top 1s ease-out 0.5s;
-     -moz-transition: top 1s ease-out 0.5s;
-     -o-transition: top 1s ease-out 0.5s;
-     transition: top 1s ease-out 0.5s;
-    }
-}
-
 
 
 
