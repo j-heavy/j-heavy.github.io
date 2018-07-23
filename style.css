@@ -1,7 +1,3 @@
-.header {
-    opacity: 1;
-}
-
 a, 
 a:visited {
     transition-property: border-bottom, border-color, background, color, fill;
