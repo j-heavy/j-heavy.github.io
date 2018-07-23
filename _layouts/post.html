@@ -18,7 +18,8 @@ layout: compress
   <div class="main-wrapper">
     {{ page.content }}
     <hr>
+    <div id="disqus_thread"></div>
   </div>
-  {%- include disqus_comments.html -%}
+{%- include preload.html -%}
 </body>
 </html>
