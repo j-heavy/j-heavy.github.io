@@ -19,7 +19,35 @@ layout: compress
   <div class="main-wrapper">
     {{ page.content }}
     <hr>
-    {%- include disqus_comments.html -%}
+    <div id="disqus_thread"></div>
+<script>
+  (function () {
+    var el = document.getElementById('disqus_thread');
+
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('load', checkPosition);
+
+    function checkPosition () {
+        var rect = el.getBoundingClientRect()
+        if (rect.top < window.innerHeight) {
+            window.removeEventListener('scroll', checkPosition);
+            window.removeEventListener('load', checkPosition);
+            loadDisqus();
+        }
+    };
+
+    function loadDisqus (){
+      var disqus_config = function () {
+        this.page.url = document.location.href;  
+        this.page.identifier = "{{ page.id }}"; 
+      };
+      var d = document, s = d.createElement('script');
+      s.src = 'https://heavy-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    };
+  })();
+</script>  
   </div>
 </body>
 </html>
