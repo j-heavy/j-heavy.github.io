@@ -22,8 +22,8 @@
 	{%- include critical.html -%}
 
 	{% for post in site.posts %}
-		<link rel="prerender" href="//j-heavy.ru">
-        <link rel="prerender" href="{{ post.url }}">
+		<link rel="prerender" as="document" href="//j-heavy.ru">
+        <link rel="prerender" as="document" href="{{ post.url }}">
     {% endfor %} 
 
 	<link rel="dns-prefetch" href="//j-heavy.ru">
