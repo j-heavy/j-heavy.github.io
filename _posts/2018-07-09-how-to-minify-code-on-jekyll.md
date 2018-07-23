@@ -6,6 +6,7 @@ cover_url: /assets/asuna.jpg
 cover_position: center
 permalink: minifycodeonjekyll
 ---
+
 Минификация кода — неотъемлемая часть оптимизации клиентской стороны веб-сайта. Благодаря шаблону __compress.html__ это можно сделать в пару кликов.
 
 # Установка
