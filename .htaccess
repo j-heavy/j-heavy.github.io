@@ -29,9 +29,3 @@ ExpiresByType application/x-shockwave-flash "access 1 month"
 ExpiresByType image/x-icon "access 1 year"
 ExpiresDefault "access 1 month"
 </IfModule>
-
-RewriteCond %{REQUEST_URI} ^/$ [NC]
-RewriteCond %{HTTP:Accept-Language} (az|hy|be|kk|ky|mo|ru|tg|tk|uz|uk) [NC]
-RewriteRule .* https://j-heavy.ru [R=302,L]
-RewriteCond %{REQUEST_URI} ^/$ [NC]
-RewriteRule .* https://j-heavy.ru/en [R=302,L]
