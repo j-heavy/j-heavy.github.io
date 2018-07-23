@@ -32,6 +32,6 @@ ExpiresDefault "access 1 month"
 
 RewriteCond %{REQUEST_URI} ^/$ [NC]
 RewriteCond %{HTTP:Accept-Language} (az|hy|be|kk|ky|mo|ru|tg|tk|uz|uk) [NC]
-RewriteRule .* https://aikido.by/ [R=302,L]
+RewriteRule .* https://j-heavy.ru [R=302,L]
 RewriteCond %{REQUEST_URI} ^/$ [NC]
-RewriteRule .* https://aikido.by/en [R=302,L]
+RewriteRule .* https://j-heavy.ru/en [R=302,L]
