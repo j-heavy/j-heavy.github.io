@@ -26,3 +26,5 @@
 		(d.head || d.body).appendChild(s);
 	};
 })();
+
+console.log('(づ｡◕‿‿◕｡)づ HELLO MY FRIEND')
