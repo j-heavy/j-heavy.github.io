@@ -30,12 +30,11 @@ html {
 }
 
 .main {
-  padding-top: 20px;
   text-align: center;
   margin: auto;
   justify-content: center;
   max-width: 840px;
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 
 .pic {
