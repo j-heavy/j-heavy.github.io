@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грибная открытка для Киры</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ECE5C7;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CDC0A1' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .card {
+            background-color: #F8F3E6;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            border: 8px solid #A67C52;
+        }
+        
+        .mushroom-decoration {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .mushroom-1 {
+            top: -25px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+        
+        .mushroom-2 {
+            top: -20px;
+            right: 30px;
+            transform: rotate(10deg);
+        }
+        
+        .mushroom-3 {
+            bottom: -25px;
+            left: 40px;
+            transform: rotate(5deg);
+        }
+        
+        .mushroom-4 {
+            bottom: -20px;
+            right: 25px;
+            transform: rotate(-10deg);
+        }
+        
+        h1 {
+            color: #8B4513;
+            margin-bottom: 30px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-shadow: 1px 1px 1px #D2B48C;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+        #yes-btn {
+            background-color: #FF6B6B;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #no-btn {
+            background-color: #4D6A6D;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mushroom-confetti {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            z-index: 1001;
+        }
+        
+        .celebration {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: rgba(248, 243, 230, 0.95);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CDC0A1' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .celebration-content {
+            background-color: #F8F3E6;
+            padding: 40px;
+            border-radius: 15px;
+            border: 8px solid #A67C52;
+            max-width: 600px;
+            position: relative;
+            margin: 20px;
+        }
+        
+        .celebration h2 {
+            color: #8B4513;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        .celebration p {
+            color: #5E3A2C;
+            font-size: 20px;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .signature {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 22px;
+            color: #8B4513;
+        }
+        
+        .mushroom-svg {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+        }
+
+        .cap {
+            fill: #D63031;
+        }
+        
+        .dots {
+            fill: #F5F5F5;
+        }
+        
+        .stem {
+            fill: #F5F5F5;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <svg class="mushroom-svg mushroom-1" viewBox="0 0 100 100">
+            <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+            <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+            <circle class="dots" cx="40" cy="40" r="3" />
+            <circle class="dots" cx="50" cy="35" r="4" />
+            <circle class="dots" cx="60" cy="45" r="3" />
+            <circle class="dots" cx="55" cy="50" r="2" />
+        </svg>
+        
+        <svg class="mushroom-svg mushroom-2" viewBox="0 0 100 100">
+            <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+            <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+            <circle class="dots" cx="40" cy="40" r="3" />
+            <circle class="dots" cx="50" cy="35" r="4" />
+            <circle class="dots" cx="60" cy="45" r="3" />
+            <circle class="dots" cx="45" cy="50" r="2" />
+        </svg>
+        
+        <svg class="mushroom-svg mushroom-3" viewBox="0 0 100 100">
+            <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+            <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+            <circle class="dots" cx="40" cy="40" r="3" />
+            <circle class="dots" cx="50" cy="35" r="4" />
+            <circle class="dots" cx="60" cy="45" r="3" />
+            <circle class="dots" cx="55" cy="50" r="2" />
+        </svg>
+        
+        <svg class="mushroom-svg mushroom-4" viewBox="0 0 100 100">
+            <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+            <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+            <circle class="dots" cx="40" cy="40" r="3" />
+            <circle class="dots" cx="50" cy="35" r="4" />
+            <circle class="dots" cx="60" cy="45" r="3" />
+            <circle class="dots" cx="45" cy="50" r="2" />
+        </svg>
+        
+        <h1>Кира, ты любишь своего брата?</h1>
+        <div class="buttons">
+            <button id="yes-btn">ДА</button>
+            <button id="no-btn">НЕТ</button>
+        </div>
+    </div>
+    
+    <div class="celebration" id="celebration">
+        <div class="celebration-content">
+            <svg class="mushroom-svg mushroom-1" viewBox="0 0 100 100">
+                <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+                <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+                <circle class="dots" cx="40" cy="40" r="3" />
+                <circle class="dots" cx="50" cy="35" r="4" />
+                <circle class="dots" cx="60" cy="45" r="3" />
+                <circle class="dots" cx="55" cy="50" r="2" />
+            </svg>
+            
+            <svg class="mushroom-svg mushroom-2" viewBox="0 0 100 100">
+                <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+                <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+                <circle class="dots" cx="40" cy="40" r="3" />
+                <circle class="dots" cx="50" cy="35" r="4" />
+                <circle class="dots" cx="60" cy="45" r="3" />
+                <circle class="dots" cx="45" cy="50" r="2" />
+            </svg>
+            
+            <svg class="mushroom-svg mushroom-3" viewBox="0 0 100 100">
+                <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+                <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+                <circle class="dots" cx="40" cy="40" r="3" />
+                <circle class="dots" cx="50" cy="35" r="4" />
+                <circle class="dots" cx="60" cy="45" r="3" />
+                <circle class="dots" cx="55" cy="50" r="2" />
+            </svg>
+            
+            <svg class="mushroom-svg mushroom-4" viewBox="0 0 100 100">
+                <path class="stem" d="M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z" />
+                <path class="cap" d="M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z" />
+                <circle class="dots" cx="40" cy="40" r="3" />
+                <circle class="dots" cx="50" cy="35" r="4" />
+                <circle class="dots" cx="60" cy="45" r="3" />
+                <circle class="dots" cx="45" cy="50" r="2" />
+            </svg>
+            
+            <h2>Дорогая Кира!</h2>
+            <p>Как грибы находят друг друга в лесу, так и мы всегда найдем поддержку друг в друге! Ты самая лучшая сестра в мире!</p>
+            <p>Хочу, чтобы ты знала, как сильно я тебя ценю и люблю. Спасибо за все наши приключения, походы за грибами и те моменты, когда мы вместе исследовали мир вокруг нас.</p>
+            <p>Ты всегда умеешь поднять мне настроение, когда нужно, и я очень рад, что у меня есть такая замечательная сестра как ты!</p>
+            <div class="signature">С любовью, твой брат Никита 🍄❤️</div>
+        </div>
+    </div>
+    
+    <script>
+        const noBtn = document.getElementById('no-btn');
+        const yesBtn = document.getElementById('yes-btn');
+        const celebration = document.getElementById('celebration');
+        
+        noBtn.addEventListener('mouseover', function() {
+            const maxX = window.innerWidth - this.offsetWidth;
+            const maxY = window.innerHeight - this.offsetHeight;
+            
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+            
+            this.style.position = 'fixed';
+            this.style.left = newX + 'px';
+            this.style.top = newY + 'px';
+        });
+        
+        noBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            
+            const maxX = window.innerWidth - this.offsetWidth;
+            const maxY = window.innerHeight - this.offsetHeight;
+            
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+            
+            this.style.position = 'fixed';
+            this.style.left = newX + 'px';
+            this.style.top = newY + 'px';
+        });
+        
+        yesBtn.addEventListener('click', function() {
+            celebration.style.display = 'flex';
+            createConfetti();
+        });
+        
+        function createConfetti() {
+            const colors = ['#D63031', '#E67E22', '#F1C40F', '#8E44AD', '#3498DB', '#2ECC71', '#1ABC9C'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.opacity = '1';
+                confetti.style.zIndex = '1001';
+                
+                const x = Math.random() * window.innerWidth;
+                const y = -20;
+                const size = Math.floor(Math.random() * 10) + 5;
+                
+                confetti.style.left = x + 'px';
+                confetti.style.top = y + 'px';
+                confetti.style.width = size + 'px';
+                confetti.style.height = size + 'px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                document.body.appendChild(confetti);
+                
+                const speed = Math.random() * 5 + 2;
+                const rotation = Math.random() * 360;
+                let posY = y;
+                
+                const interval = setInterval(() => {
+                    posY += speed;
+                    confetti.style.top = posY + 'px';
+                    confetti.style.transform = `rotate(${rotation + posY}deg)`;
+                    
+                    if (posY > window.innerHeight) {
+                        clearInterval(interval);
+                        confetti.remove();
+                    }
+                }, 20);
+            }
+            
+            createMushroomConfetti();
+        }
+        
+        function createMushroomConfetti() {
+            const capColors = ['#D63031', '#E67E22', '#F1C40F', '#8E44AD', '#3498DB'];
+            
+            for (let i = 0; i < 50; i++) {
+                const mushroom = document.createElement('div');
+                mushroom.className = 'mushroom-confetti';
+                
+                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                svg.setAttribute("viewBox", "0 0 100 100");
+                svg.style.width = '100%';
+                svg.style.height = '100%';
+                
+                const stem = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                stem.setAttribute("d", "M45,50 L45,85 C45,92 55,92 55,85 L55,50 Z");
+                stem.style.fill = "#F5F5F5";
+                
+                const cap = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                cap.setAttribute("d", "M30,50 C30,30 70,30 70,50 C70,60 30,60 30,50 Z");
+                cap.style.fill = capColors[Math.floor(Math.random() * capColors.length)];
+                
+                const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                dot.setAttribute("cx", "50");
+                dot.setAttribute("cy", "40");
+                dot.setAttribute("r", "4");
+                dot.style.fill = "#F5F5F5";
+                
+                svg.appendChild(stem);
+                svg.appendChild(cap);
+                svg.appendChild(dot);
+                mushroom.appendChild(svg);
+                
+                const x = Math.random() * window.innerWidth;
+                const y = -30;
+                const size = Math.floor(Math.random() * 15) + 15;
+                const rotation = Math.random() * 360;
+                
+                mushroom.style.left = x + 'px';
+                mushroom.style.top = y + 'px';
+                mushroom.style.width = size + 'px';
+                mushroom.style.height = size + 'px';
+                
+                document.body.appendChild(mushroom);
+                
+                const speed = Math.random() * 3 + 2;
+                const rotationSpeed = Math.random() * 5 - 2.5;
+                let posY = y;
+                let currentRotation = rotation;
+                
+                const interval = setInterval(() => {
+                    posY += speed;
+                    currentRotation += rotationSpeed;
+                    mushroom.style.top = posY + 'px';
+                    mushroom.style.transform = `rotate(${currentRotation}deg)`;
+                    
+                    if (posY > window.innerHeight) {
+                        clearInterval(interval);
+                        mushroom.remove();
+                    }
+                }, 20);
+            }
+        }
+    </script>
+</body>
+</html>
